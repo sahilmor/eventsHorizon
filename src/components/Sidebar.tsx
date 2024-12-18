@@ -37,6 +37,7 @@ const Sidebar = () => {
           <div key={idx} className="space-y-4">
             <div className="flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <h2 className="text-sm font-semibold text-muted-foreground">{section.title}</h2>
+              
               <Button 
                 variant="ghost" 
                 size="sm" 
