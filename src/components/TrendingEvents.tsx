@@ -46,6 +46,7 @@ const TrendingEvents = () => {
             <SelectItem value="Miami">Miami</SelectItem>
             <SelectItem value="Las Vegas">Las Vegas</SelectItem>
             <SelectItem value="Austin">Austin</SelectItem>
+            <SelectItem value="Austin">Los Santos</SelectItem>
           </SelectContent>
         </Select>
       </div>
