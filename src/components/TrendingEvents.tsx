@@ -1,5 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card";
-import CitySelector from "./CitySelector";
+import { ChevronDown } from "lucide-react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const TrendingEvents = () => {
   const events = [
@@ -25,8 +32,22 @@ const TrendingEvents = () => {
 
   return (
     <div className="mb-12">
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-bold">Trending this week in <CitySelector /></h2>
+      <div className="flex items-center gap-2 mb-6">
+        <h2 className="text-2xl font-bold">Trending this week in</h2>
+        <Select defaultValue="NYC">
+          <SelectTrigger className="w-auto border-none p-0 bg-transparent hover:bg-transparent focus:ring-0">
+            <SelectValue />
+            <ChevronDown className="h-4 w-4 text-primary" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="NYC">NYC</SelectItem>
+            <SelectItem value="LA">LA</SelectItem>
+            <SelectItem value="Chicago">Chicago</SelectItem>
+            <SelectItem value="Miami">Miami</SelectItem>
+            <SelectItem value="Las Vegas">Las Vegas</SelectItem>
+            <SelectItem value="Austin">Austin</SelectItem>
+          </SelectContent>
+        </Select>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {events.map((event, index) => (

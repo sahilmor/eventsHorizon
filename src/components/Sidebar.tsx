@@ -12,8 +12,8 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="h-screen w-64 bg-card fixed left-0 top-0 border-r border-border p-4">
-      <div className="mb-8">
+    <div className="h-screen w-16 hover:w-64 fixed left-0 top-0 bg-card border-r border-border p-4 transition-all duration-300 group hover:shadow-xl z-50">
+      <div className="mb-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <h1 className="text-2xl font-bold text-primary">EventsHorizon</h1>
       </div>
       <nav>
@@ -27,7 +27,9 @@ const Sidebar = () => {
             )}
           >
             <item.icon className="w-5 h-5" />
-            <span>{item.label}</span>
+            <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+              {item.label}
+            </span>
           </button>
         ))}
       </nav>

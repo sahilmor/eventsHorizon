@@ -29,7 +29,7 @@ const ArtistsAndOrganizers = () => {
     <div className="mb-12">
       <h2 className="text-2xl font-bold mb-6">Artists & Organizers</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="grid grid-cols-3 gap-4">
+        <div className="flex flex-col gap-4">
           {artists.map((artist, index) => (
             <Card key={index} className="card-hover">
               <CardContent className="p-4">
