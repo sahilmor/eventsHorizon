@@ -15,10 +15,8 @@ const Index = () => {
             <ArtistsAndOrganizers />
             <UpcomingConcerts />
           </div>
-          <div className="md:col-span-1">
-            <div className="sticky top-8">
-              <FeaturedEvent />
-            </div>
+          <div className="md:col-span-1 h-[calc(100vh-4rem)] sticky top-8">
+            <FeaturedEvent />
           </div>
         </div>
       </div>
